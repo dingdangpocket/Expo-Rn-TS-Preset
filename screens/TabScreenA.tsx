@@ -15,7 +15,11 @@ const TabScreenA = ({ navigation }: any) => {
   const [num, setNum] = useState<string | null>(null);
   const LinkToPageG = () => {
     navigation.navigate("Screen_G", { name: "李华", id: "18" });
-    //前往StackG页面
+    //前往StackG页面,传参测试页面;
+  };
+  const LinkToPageE = () => {
+    navigation.navigate("Screen_E", { name: "李华", id: "18" });
+    //前往StackE页面,camera测试网站;
   };
 
   useEffect(() => {
@@ -48,6 +52,13 @@ const TabScreenA = ({ navigation }: any) => {
         onPress={() => LinkToPageG()}
       >
         <Text>TAB页面A</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={{ backgroundColor: "red", height: 100 }}
+        activeOpacity={0.7}
+        onPress={() => LinkToPageE()}
+      >
+        <Text style={{color:"white"}}>ScreenE</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={{ backgroundColor: "blue", height: 100 }}
